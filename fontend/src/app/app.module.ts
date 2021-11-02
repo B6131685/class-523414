@@ -1,0 +1,41 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule} from './app-routing.module';
+import { AppComponent } from './app.component';
+
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AdminComponent } from './admin/admin.component';
+import { UserComponent } from './user/user.component';
+import {CanActivate} from "@angular/router";
+import { LoginComponent } from './login/login.component';
+import { MainhomeComponent } from './mainhome/mainhome.component';
+import { AngularWebStorageModule } from 'angular-web-storage';
+import { NewBookComponent } from './adminMode/new-book/new-book.component';
+import { StockComponent } from './adminMode/stock/stock.component';
+import { EditQuantityComponent } from './adminMode/edit-quantity/edit-quantity.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    AdminComponent,
+    UserComponent,
+    LoginComponent,
+    MainhomeComponent,
+    NewBookComponent,
+    StockComponent,
+    EditQuantityComponent,
+    
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule, FormsModule,
+    HttpClientModule,
+    AngularWebStorageModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
